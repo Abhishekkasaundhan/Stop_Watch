@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+{
 
     private boolean IsRun = false;
     private long POS = 0;
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 btnStart.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (!IsRun) {
+                        if (!IsRun)
+                        {
                             chmeter.setBase(SystemClock.elapsedRealtime() - POS);
                             chmeter.start();
                             IsRun = true;
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                btnPause.setOnClickListener(new View.OnClickListener() {
+                btnPause.setOnClickListener(new View.OnClickListener()
+                {
                     @Override
                     public void onClick(View v) {
                         if (IsRun) {
@@ -48,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                btnReset.setOnClickListener(new View.OnClickListener() {
+                btnReset.setOnClickListener(new View.OnClickListener()
+                {
                     @Override
                     public void onClick(View v) {
                         chmeter.setBase(SystemClock.elapsedRealtime());
